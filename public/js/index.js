@@ -15,16 +15,16 @@ async function fetchData(location) {
         res.style.display = "none";
         err.style.display = "block";
 
-        loc.value = ''
-        forecast.val = ''
+        loc.innerHTML = ''
+        forecast.innerHTML = ''
         errorInput = responseJson.error
     } else {
         console.log(responseJson)
         err.style.display = "none";
         res.style.display = "block";
 
-        loc.value = responseJson.location
-        forecast.value = responseJson.forecast
+        loc.innerHTML = responseJson.location
+        forecast.innerHTML = responseJson.forecast
         errorInput = ''
     }
 }
